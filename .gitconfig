@@ -1,0 +1,10 @@
+[alias]
+	st = status
+	br = branch
+	co = checkout
+	ci = commit
+	l = !git --no-pager log --reverse -5 --pretty=format:\"%Cblue[%aN]%Creset: %s \" --decorate --date=short
+	psh = push origin HEAD		# push current branch to origin
+[user]
+	name = riseremi
+	email = riseremi@icloud.com
