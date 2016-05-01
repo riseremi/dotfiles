@@ -1,11 +1,14 @@
 [alias]
-	st = status
+	st = status -s
 	br = branch
 	co = checkout
 	ci = commit
+	cim = commit -am
 	l = !git --no-pager log --reverse -5 --pretty=format:\"%Cblue[%aN]%Creset: %s \" --decorate --date=short
 	psh = push origin HEAD		# push current branch to origin
-	undo = reset soft HEAD~
+	undo = reset --soft HEAD~~
+	fetch = fetch --prune
+	hop-develop = "!git checkout develop; git fetch; git pull origin develop"
 [user]
 	name = riseremi
 	email = riseremi@icloud.com
